@@ -1,0 +1,9 @@
+[
+    {"title": "Smartphone", "price": 699.99},
+    {"title": "Tablet", "price": 449.99},
+    {"title": "Earbuds", "price": 79.99},
+    {"title": "Charger", "price": 19.99},
+    {"title": "", "price": 10.00},
+    {"title": "Screen Protector", "price": "invalid"},
+    {"title": "Phone Case", "price": 15.99}
+]

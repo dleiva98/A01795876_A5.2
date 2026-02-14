@@ -1,0 +1,10 @@
+[
+    {"Product": "Smartphone", "Quantity": 3},
+    {"Product": "Tablet", "Quantity": 2},
+    {"Product": "Earbuds", "Quantity": 10},
+    {"Product": "Charger", "Quantity": 5},
+    {"Product": "NonExistentProduct", "Quantity": 2},
+    {"Product": "Phone Case", "Quantity": 7},
+    {"Product": "Screen Protector", "Quantity": 4},
+    {"Product": "Smartphone", "Quantity": -1}
+]

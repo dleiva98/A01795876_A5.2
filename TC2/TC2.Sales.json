@@ -1,0 +1,12 @@
+[
+    {"Product": "Office Chair", "Quantity": 10},
+    {"Product": "Standing Desk", "Quantity": 5},
+    {"Product": "Desk Lamp", "Quantity": 20},
+    {"Product": "Notebook A5", "Quantity": 100},
+    {"Product": "Pen Pack", "Quantity": 50},
+    {"Product": "Whiteboard", "Quantity": 3},
+    {"Product": "Projector", "Quantity": 2},
+    {"Product": "HDMI Cable", "Quantity": 15},
+    {"Product": "Surge Protector", "Quantity": 8},
+    {"Product": "File Cabinet", "Quantity": 4}
+]

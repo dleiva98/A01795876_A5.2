@@ -1,0 +1,124 @@
+]633;E;echo "===============================================================================";24aebbe7-e69d-4e85-9d44-7934469ebeca]633;C===============================================================================
+EVIDENCIA DE VERIFICACIÓN - A01795876_A5.2
+Estudiante: Daniel Leiva (A01795876)
+Repositorio: https://github.com/dleiva98/A01795876_A5.2
+Fecha: Mon Feb 16 04:19:24 UTC 2026
+===============================================================================
+
+=== VERSIONES ===
+$ python --version
+Python 3.12.1
+$ pip show flake8 | grep Version
+Version: 7.3.0
+$ pip show pylint | grep Version
+Version: 4.0.4
+
+=== FLAKE8 - ANÁLISIS ESTÁTICO ===
+$ flake8 computeSales.py
+(exit code: 0)
+
+=== PYLINT - ANÁLISIS ESTÁTICO ===
+$ pylint computeSales.py
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+=== CASO DE PRUEBA 1 (TC1) ===
+$ python computeSales.py TC1/TC1.ProductList.json TC1/TC1.Sales.json
+============================================================
+SALES RESULTS
+============================================================
+
+Product                           Qty      Price     Subtotal
+------------------------------------------------------------
+Laptop                              2 $   999.99 $    1999.98
+Wireless Mouse                      5 $    25.50 $     127.50
+USB Keyboard                        3 $    35.99 $     107.97
+Monitor 27in                        1 $   349.99 $     349.99
+Webcam HD                           4 $    89.99 $     359.96
+------------------------------------------------------------
+                                           TOTAL $    2945.40
+
+Time elapsed: 0.0001 seconds
+============================================================
+
+Results saved to 'SalesResults.txt'
+
+=== CASO DE PRUEBA 2 (TC2) ===
+$ python computeSales.py TC2/TC2.ProductList.json TC2/TC2.Sales.json
+============================================================
+SALES RESULTS
+============================================================
+
+Product                           Qty      Price     Subtotal
+------------------------------------------------------------
+Office Chair                       10 $   249.99 $    2499.90
+Standing Desk                       5 $   599.99 $    2999.95
+Desk Lamp                          20 $    45.00 $     900.00
+Notebook A5                       100 $     8.50 $     850.00
+Pen Pack                           50 $    12.99 $     649.50
+Whiteboard                          3 $    75.00 $     225.00
+Projector                           2 $   450.00 $     900.00
+HDMI Cable                         15 $    15.99 $     239.85
+Surge Protector                     8 $    29.99 $     239.92
+File Cabinet                        4 $   189.99 $     759.96
+------------------------------------------------------------
+                                           TOTAL $   10264.08
+
+Time elapsed: 0.0001 seconds
+============================================================
+
+Results saved to 'SalesResults.txt'
+
+=== CASO DE PRUEBA 3 (TC3) ===
+$ python computeSales.py TC3/TC3.ProductList.json TC3/TC3.Sales.json
+Warning: Product entry without title found, skipping.
+Warning: Invalid price for 'Screen Protector', skipping.
+Warning: Product 'NonExistentProduct' not found in catalogue, skipping.
+Warning: Product 'Screen Protector' not found in catalogue, skipping.
+Warning: Invalid quantity for 'Smartphone', skipping.
+============================================================
+SALES RESULTS
+============================================================
+
+Product                           Qty      Price     Subtotal
+------------------------------------------------------------
+Smartphone                          3 $   699.99 $    2099.97
+Tablet                              2 $   449.99 $     899.98
+Earbuds                            10 $    79.99 $     799.90
+Charger                             5 $    19.99 $      99.95
+Phone Case                          7 $    15.99 $     111.93
+------------------------------------------------------------
+                                           TOTAL $    4011.73
+
+Time elapsed: 0.0001 seconds
+============================================================
+
+Results saved to 'SalesResults.txt'
+
+=== TESTS AUTOMATIZADOS ===
+$ python -m pytest test_compute_sales.py -v
+============================= test session starts ==============================
+platform linux -- Python 3.12.1, pytest-9.0.2, pluggy-1.6.0 -- /home/codespace/.python/current/bin/python
+cachedir: .pytest_cache
+rootdir: /workspaces/A01795876_A5.2/A01795876_A5.2
+plugins: anyio-4.11.0
+collecting ... collected 12 items
+
+test_compute_sales.py::TestComputeSalesTC1::test_tc1_execution PASSED    [  8%]
+test_compute_sales.py::TestComputeSalesTC1::test_tc1_results_file PASSED [ 16%]
+test_compute_sales.py::TestComputeSalesTC1::test_tc1_time_elapsed PASSED [ 25%]
+test_compute_sales.py::TestComputeSalesTC1::test_tc1_total PASSED        [ 33%]
+test_compute_sales.py::TestComputeSalesTC2::test_tc2_all_products_listed PASSED [ 41%]
+test_compute_sales.py::TestComputeSalesTC2::test_tc2_execution PASSED    [ 50%]
+test_compute_sales.py::TestComputeSalesTC2::test_tc2_total PASSED        [ 58%]
+test_compute_sales.py::TestComputeSalesTC3::test_tc3_handles_invalid_data PASSED [ 66%]
+test_compute_sales.py::TestComputeSalesTC3::test_tc3_missing_file PASSED [ 75%]
+test_compute_sales.py::TestComputeSalesTC3::test_tc3_total_excludes_invalid PASSED [ 83%]
+test_compute_sales.py::TestComputeSalesTC3::test_tc3_warnings_displayed PASSED [ 91%]
+test_compute_sales.py::TestComputeSalesTC3::test_tc3_wrong_arguments PASSED [100%]
+
+============================== 12 passed in 0.30s ==============================
+
+===============================================================================
